@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Summarizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="blob-area">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+    <div class="container">
+        <h2>Page Insights</h2>
+        <p class="desc">Discover the essence of this page</p>
+
+        <select id="summary-type">
+            <option value="brief">Brief (3 points)</option>
+            <option value="detailed">Detailed Analysis</option>
+            <option value="bullets">Key Takeaways</option>
+        </select>
+
+        <button id="summarize-btn">Summarize Page</button>
+
+        <div id="loader" class="loader"></div>
+
+        <div id="result-container">
+            <div id="result-text"></div>
+            <button id="copy-btn" style="margin-top: 15px; background: rgba(0,0,0,0.3); font-size: 0.75rem;">Copy
+                Summary</button>
+        </div>
+
+        <div id="status" style="font-size: 0.75rem; color: #ff6b6b; display: none;"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

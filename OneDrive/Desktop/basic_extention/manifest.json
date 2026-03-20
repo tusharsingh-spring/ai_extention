@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "AI Summarizer",
+    "version": "1.3",
+    "description": "Free AI page summarizer powered by Groq + LLaMA.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://api.groq.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "options_page": "options.html",
+    "icons": {
+        "128": "icon.png"
+    }
+}
